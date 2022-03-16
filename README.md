@@ -1,6 +1,6 @@
 # Offline/untraceable bookmarklets 
 These bookmarklet and exploits can be downloaded as a .html file and ran. This has the advantage of avoiding the prying eyes of teachers as when downloaded and ran, your teachers can't see the file you're running. <p>
-This file includes: <p>
+## This file includes:<p>
   An IFrame loader to load Proxy sites your teacher can't see <p>
     A History flooder <p>
       An inspect element clone known as Eruda <p>
