@@ -11,3 +11,5 @@ This file includes: <p>
               tri.js which makes your webpages 3d <p>
                 piano.js to load a piano on webpages if that's your thing
          
+<p>
+  <b>FULL CREDITS ARE IN THE FILE PAGE</b>
