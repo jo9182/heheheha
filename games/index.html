@@ -1,1 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bookmarklets</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="MyClock" class="clock" onload="clockTime()"></div>
+    <a class="goback" href="javascript:window.location.reload();">Reload (Use if You Want To Reset Changes)</a>
+    <h1>Bookmarklets!</h1>
+    <a href="https://github.com/Avad3/heheheha">To update this file, visit the GitHub by clicking this text.</a><br><br><br>
+    <p>about:blank iframe loader</p>
+    <input id="exploit" class="exploit" type="text" placeholder="Enter URL Here"></input>
+    <div class="labels-">
+      <a class="bookmarklets" id="iframe" href="">Cookie Clicker</a>
+    </div>
+    <script>
+      function clockTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClock").innerText = time;
+    document.getElementById("MyClock").textContent = time;
+    
+    setTimeout(clockTime, 1000);
+    
+};
 
+
+clockTime();
+
+document.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      var exploit = document.getElementById('exploit').value;
+      var tab = window.open('about:blank', '_blank');
+      tab.document.documentElement.innerHTML = '<!DOCTYPE HTML><html><head><title>Google Drive</title><link rel="icon" type="image/png" href="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png"></head><body><iframe src="'+exploit+'" style="position:fixed;top:0;bottom:0;left:0;right:0;border:none;outline:none;width:100%;height:100%;"></iframe></body></html>';
+    }
+});
+    document.getElementById('iframe').href = `./cookie-clicker/index.html`
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+body {
+  margin: 20px;
+  text-align: center;
+  background: #89CFF0;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.labels- {
+  display: flex;
+  flex:1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px;
+  align-content: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.clock {
+  position: absolute;
+  width: 350px;
+  bottom: 92%;
+  text-align: right;
+  left: 25px;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.downbtn {
+  margin-left: 20px;
+  width: 175px;
+  height: 50px;
+  background-color: powderblue;
+  color: white;
+  border: none;
+  font-size: 18px;
+  transition: 0.5s all ease;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  transition: 0.5s all ease;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all ease;
+}
+
+.content a:hover {
+  background-color: #ddd;
+  transition: 0.5s all ease;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.dropdown:hover .downbtn {
+  background-color: transparent;
+}
+
+.goback {
+  border: 2px solid white;
+  padding: 7.5px;
+}
+
+.bookmarklets {
+  margin: 7px;
+  border: 2px solid white;
+  border-radius: 45px;
+  padding: 7.5px;
+  transition: 0.5s all ease;
+}
+
+.credits {
+  text-decoration: underline;
+  color: rgb(150,150,150);
+  transition-duration: 0.2s;
+}
+
+.credits:hover {
+  color: gray;
+}
+
+.bookmarklets:hover {
+  background: white;
+  color: black;
+}
+
+.exploit {
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  border-radius: 45px;
+  border: 2px solid white;
+  width: 250px;
+  height: 20px;
+  background: transparent;
+  padding: 5px;
+}
+    </style>
+  </body>
+</html>
